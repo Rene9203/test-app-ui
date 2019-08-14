@@ -1,0 +1,22 @@
+<header class="header-adc">
+  <div class="header-brand">
+    <a routerLink="" class="header-band-text">Job Posting</a>
+  </div>
+  <div class="header-options">
+    <ul class="header-list d-lg-inline-flex justify-content-between">
+      <li *ngIf="registeredService.isEmployer()"><a routerLink="/employer/offers-list">My Offers</a></li>
+      <li *ngIf="registeredService.isAdmin()" style="margin-left: 10px"><a routerLink="/backend">See Offers Details</a></li>
+    </ul>
+  </div>
+  <div class="pull-right" style="color: white">
+    <button *ngIf="registeredService.isRegistered()" style="margin-top: 4px;" class="btn btn-success" (click)="registeredService.signOut()" type="button">SignOut <span class="fa fa-sign-out"></span></button>
+    <button *ngIf="!registeredService.isRegistered()" style="margin-top: 4px;" class="btn btn-success" (click)="logOut()" type="button">SignIn <span class="fa fa-sign-in"></span></button>
+  </div>
+</header>
+<div class="content">
+  <ng-spin>
+    <router-outlet>
+    </router-outlet>
+  </ng-spin>
+</div>
+

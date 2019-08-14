@@ -1,0 +1,27 @@
+<div class="col-md-4 offset-md-4">
+  <form #appForm="ngForm" (submit)="onSubmit()">
+    <h3>Add New Offer</h3>
+    <div class="form-group">
+      <label [class.label-invalid]="description.invalid && description.touched"
+             [class.label-valid]="description.valid && description.touched" for="description">Description <span
+        style="color: #dc3545">*</span></label>
+      <textarea class="form-control" #description="ngModel" name="description" id="description"
+                [(ngModel)]="formData.description" required></textarea>
+      <div *ngIf="description.touched && description.invalid">
+        <label *ngIf="description.errors.required" style="color: #dc3545">The description is required</label>
+      </div>
+    </div>
+    <div class="form-group">
+      <label [class.label-invalid]="offerType.touched && offerType.invalid"
+             [class.label-valid]="offerType.touched && offerType.valid" for="offerType">Offer Type <span style="color: #dc3545">*</span></label>
+      <app-select required #offerType="ngModel" [(ngModel)]="formData.offerTypeId" [items]="offerTypes"
+                  [options]="optionsOfferType" name="offerType" id="offerType"></app-select>
+      <div *ngIf="offerType.touched && offerType.invalid">
+        <label *ngIf="offerType.errors.required" style="color: #dc3545">The offer type is required</label>
+      </div>
+    </div>
+    <div>
+      <button [disabled]="appForm.form.invalid" class="btn btn-success">Add <span class="fa fa-plus"></span></button>
+    </div>
+  </form>
+</div>

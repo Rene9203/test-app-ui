@@ -1,0 +1,32 @@
+<div style="position: relative">
+  <div class="row" style="min-height: 300px">
+    <div class="col-md-12">
+      <div class="col-12" style="overflow-y: auto">
+        <h3 class="title-centered">My Offers</h3>
+        <div class="row">
+          <a style="margin-bottom: 5px; margin-left: 10px" class="btn btn-primary" [routerLink]="['/employer/offers-add']"><span></span> Add</a>
+        </div>
+        <table class="table table-bordered">
+          <thead>
+          <tr>
+            <th>Offer Type</th>
+            <th>Description</th>
+            <th>Active</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr style="text-align: center" *ngFor="let item of offers">
+            <th>{{item.offerTypeName}}</th>
+            <th>{{item.description}}</th>
+            <th><input type="checkbox" [(ngModel)]="item.active" (click)="changeState(item.active, item.id)"></th>
+          </tr>
+          </tbody>
+        </table>
+        <div *ngIf="pagesCount > 0" class="pagination justify-content-center">
+          <a (click)="listOffers(i)" class="page-item btn btn-link" style="cursor: pointer"
+          [ngStyle]="{color: i === page? 'blue' : 'black'}" *ngFor="let i of pages">{{i}}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

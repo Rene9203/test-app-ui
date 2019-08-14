@@ -1,0 +1,23 @@
+<div style="position: relative">
+  <div class="row" style="min-height: 300px">
+    <div class="col-md-12">
+      <div class="col-12" style="overflow-y: auto">
+        <h3 class="title-centered">Offers Details</h3>
+        <table class="table table-bordered">
+          <thead>
+          <tr>
+            <th>Offer Type</th>
+            <th>Count</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr style="text-align: center" *ngFor="let item of items">
+            <th>{{item.name}}</th>
+            <th>{{item.count}}</th>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

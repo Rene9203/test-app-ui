@@ -1,0 +1,29 @@
+<div class="col-md-4 offset-md-4">
+  <h3 class="text-center">Apply on this offer</h3>
+  <form #appForm="ngForm" (submit)="onSubmit()">
+    <div class="form-group">
+      <label [class.label-invalid]="nameC.invalid && nameC.touched"
+             [class.label-valid]="nameC.valid && nameC.touched" for="name">Name <span
+        style="color: #dc3545">*</span></label>
+      <input class="form-control" #nameC="ngModel" name="name" id="name"
+             [(ngModel)]="formData.name" required>
+      <div *ngIf="nameC.touched && nameC.invalid">
+        <label *ngIf="nameC.errors.required" style="color: #dc3545">The name is required</label>
+      </div>
+    </div>
+    <div class="form-group">
+      <label [class.label-invalid]="email.invalid && email.touched"
+             [class.label-valid]="email.valid && email.touched" for="email">Email <span style="color: #dc3545">*</span></label>
+      <input class="form-control" #email="ngModel" name="email" id="email"
+             [pattern]="'^[_a-z0-9-]+(.[_a-z0-9-]+)*@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,4})$'"
+             [(ngModel)]="formData.email" required>
+      <div *ngIf="email.touched && email.invalid">
+        <label *ngIf="email.errors.required" style="color: #dc3545">The email is required</label>
+        <label *ngIf="email.errors.pattern" style="color: #dc3545">Please provide a valid email</label>
+      </div>
+    </div>
+    <div>
+      <button [disabled]="appForm.form.invalid" class="btn btn-success">Apply <span class="fa fa-pencil"></span></button>
+    </div>
+  </form>
+</div>

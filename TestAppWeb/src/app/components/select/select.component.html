@@ -1,0 +1,6 @@
+<select (click)="onTouch();" [(ngModel)]="value" [disabled]="disabled" class="form-control">
+  <option hidden value="{{options.placeHolder}}">{{options.placeHolder}}</option>
+  <option *ngFor="let item of items" [value]="item[options.valueField]">
+    {{item[options.textField]}}
+  </option>
+</select>

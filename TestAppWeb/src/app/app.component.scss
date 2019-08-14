@@ -1,0 +1,169 @@
+.header-adc {
+  background-color: #28a745;
+  height: 50px !important;
+  position: fixed;
+  width: 100% !important;
+  z-index: 900;
+  margin-top: -50px;
+}
+
+.header-brand {
+  position: relative;
+  height: 100%;
+  width: 20%;
+  margin-left: 5%;
+  float: left;
+}
+
+.header-band-text {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: transparent;
+  font-size: 30px;
+}
+
+.header-band-text:hover {
+  font-size: 32px;
+  color: whitesmoke !important
+}
+
+.header-options {
+  float: left;
+  height: 100%;
+  position: relative;
+}
+
+.header-list li {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.header-list li:hover {
+  font-size: 17px;
+  cursor: pointer;
+  cursor: hand;
+}
+
+.header-list li:focus {
+  background-color: blue !important;
+}
+
+.header-list li a {
+  font-size: 15px;
+  text-decoration: none;
+  color: white !important;
+}
+
+.header-list li a:focus {
+  color: navajowhite !important;
+}
+
+header-list li {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.header-list li:hover {
+  font-size: 17px;
+  cursor: pointer;
+  cursor: hand;
+}
+
+.header-list li:focus {
+  background-color: blue !important;
+}
+
+.header-list li a {
+  font-size: 15px;
+  text-decoration: none;
+  color: white !important;
+}
+
+.header-list li a:focus {
+  color: navajowhite !important;
+}
+
+
+
+.header-list-md li {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.header-list-md li:hover {
+  font-size: 17px;
+  cursor: pointer;
+  cursor: hand;
+}
+
+.header-list-md li:focus {
+  background-color: blue !important;
+}
+
+.header-list-md li a {
+  font-size: 15px;
+  text-decoration: none;
+  color: white !important;
+}
+
+.header-list-md li a:focus {
+  color: navajowhite !important;
+}
+
+.header-list-md li {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.header-list-md li:hover {
+  font-size: 17px;
+  cursor: pointer;
+  cursor: hand;
+}
+
+.header-list-md li:focus {
+  background-color: blue !important;
+}
+
+.header-list-md li a {
+  font-size: 15px;
+  text-decoration: none;
+  color: white !important;
+}
+
+.header-list-md li a:focus {
+  color: navajowhite !important;
+}
+
+
+
+.header-list-md {
+  display: none!important;
+}
+
+.header-list-md li {
+  list-style: none;
+  margin-top: 5px;
+}
+
+.content {
+  position: relative;
+  margin-top: 50px;
+  min-height: 600px;
+  overflow-y: auto;
+}
+
+@media(max-width: 1000px) {
+  .header-brand {
+    margin-left: 2%;
+    width: 25%;
+  }
+
+  .header-list {
+    display: none;
+  }
+
+  .header-list-md {
+    display: inline-flex!important;
+  }
+}

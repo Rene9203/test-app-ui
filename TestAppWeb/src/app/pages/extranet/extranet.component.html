@@ -1,0 +1,49 @@
+<div style="position: relative">
+  <div class="row" style="min-height: 300px">
+    <div class="col-md-12">
+      <div class="col-12" style="overflow-y: auto">
+        <h3 class="title-centered">{{title}}</h3>
+        <div class="row  d-flex justify-content-center">
+          <div class="form-inline col-md-9 d-flex justify-content-between">
+            <div class="col-md-3">
+              <app-select #offerType="ngModel" [(ngModel)]="offerTypeFilter" [items]="offerTypes"
+                          [options]="optionsOfferType" name="offerType" id="offerType"></app-select>
+            </div>
+            <div class="col-md-3">
+              <button (click)="filter()" class="btn btn-primary"><span class="fa fa-search"></span></button>
+            </div>
+            <div class="col-md-3">
+              <button (click)="clearFilter()" class="btn btn-warning"><span class="fa fa-undo"></span></button>
+            </div>
+          </div>
+        </div>
+        <table class="table table-bordered">
+          <thead>
+          <tr>
+            <th style="text-align: center" *ngFor="let header of headers">
+              {{header.text}}
+            </th>
+            <th></th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr style="text-align: center" *ngFor="let item of offers">
+            <td *ngFor="let head of headers">
+              {{item[head.value]}}
+            </td>
+            <td>
+              <button style="margin-left: 5px" routerLink="/offers/apply/{{item.id}}"
+                      class="btn btn-primary"><span
+                class="fa fa-pencil"></span></button>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+        <div *ngIf="pagesCount > 0" class="pagination justify-content-center">
+          <a (click)="listOffers(i)" class="page-item btn btn-link" style="cursor: pointer"
+             [ngStyle]="{color: i === page? 'blue' : 'black'}" *ngFor="let i of pages">{{i}}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

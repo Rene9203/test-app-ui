@@ -1,0 +1,207 @@
+/* You can add global styles to this file, and also import other style files */
+.input-invalid {
+  border-color: #dc3545!important;
+}
+
+.input-valid {
+  border-color: #28a745!important;
+}
+
+input.ng-touched.ng-invalid {
+  border-color: #dc3545;
+}
+
+input.ng-touched.ng-valid {
+  border-color: #28a745;
+}
+
+app-select.ng-touched.ng-invalid {
+  border-color: #dc3545;
+}
+
+app-select.ng-touched.ng-valid {
+  border-color: #28a745;
+}
+
+label.label-invalid {
+  color: #dc3545;
+}
+
+label.label-valid {
+  color: #28a745;
+}
+
+.header-adc {
+  background-color: #28a745;
+  height: 50px !important;
+  position: fixed;
+  width: 100% !important;
+  z-index: 900;
+  margin-top: -50px;
+}
+
+.header-brand {
+  position: relative;
+  height: 100%;
+  width: 20%;
+  margin-left: 5%;
+  float: left;
+}
+
+.header-band-text {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: transparent;
+  font-size: 30px;
+}
+
+.header-band-text:hover {
+  font-size: 32px;
+  color: whitesmoke !important
+}
+
+.header-options {
+  float: left;
+  height: 100%;
+  position: relative;
+}
+
+.header-list li {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.header-list li:hover {
+  font-size: 17px;
+  cursor: pointer;
+  cursor: hand;
+}
+
+.header-list li:focus {
+  background-color: blue !important;
+}
+
+.header-list li a {
+  font-size: 15px;
+  text-decoration: none;
+  color: white !important;
+}
+
+.header-list li a:focus {
+  color: navajowhite !important;
+}
+
+header-list li {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.header-list li:hover {
+  font-size: 17px;
+  cursor: pointer;
+  cursor: hand;
+}
+
+.header-list li:focus {
+  background-color: blue !important;
+}
+
+.header-list li a {
+  font-size: 15px;
+  text-decoration: none;
+  color: white !important;
+}
+
+.header-list li a:focus {
+  color: navajowhite !important;
+}
+
+.header-list-md li {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.header-list-md li:hover {
+  font-size: 17px;
+  cursor: pointer;
+  cursor: hand;
+}
+
+.header-list-md li:focus {
+  background-color: blue !important;
+}
+
+.header-list-md li a {
+  font-size: 15px;
+  text-decoration: none;
+  color: white !important;
+}
+
+.header-list-md li a:focus {
+  color: navajowhite !important;
+}
+
+.header-list-md li {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.header-list-md li:hover {
+  font-size: 17px;
+  cursor: pointer;
+  cursor: hand;
+}
+
+.header-list-md li:focus {
+  background-color: blue !important;
+}
+
+.header-list-md li a {
+  font-size: 15px;
+  text-decoration: none;
+  color: white !important;
+}
+
+.header-list-md li a:focus {
+  color: navajowhite !important;
+}
+
+.header-list-md {
+  display: none !important;
+}
+
+.header-list-md li {
+  list-style: none;
+  margin-top: 5px;
+}
+
+.content {
+  position: relative;
+  margin-top: 70px;
+  min-height: 600px;
+  overflow-y: auto;
+}
+
+@media(max-width: 1000px) {
+  .header-brand {
+    margin-left: 2%;
+    width: 25%;
+  }
+
+  .header-list {
+    display: none;
+  }
+
+  .header-list-md {
+    display: inline-flex !important;
+  }
+}
+
+.title-centered {
+  width: 100%;
+  text-align: center;
+}
+
+
+
+
